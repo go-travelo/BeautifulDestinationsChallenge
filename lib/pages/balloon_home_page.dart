@@ -1,3 +1,4 @@
+import 'package:bdb_challenge/constants/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
@@ -19,7 +20,8 @@ class _HomepageState extends State<Homepage> {
     _controller = VideoPlayerController.asset(
         'assets/TikTok_recording.MP4')
       ..initialize().then((_) {
-        // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
+        // Ensure the first frame is shown after the video is initialized,
+        // even before the play button has been pressed.
         setState(() {});
       });
   }
@@ -28,6 +30,7 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: GestureDetector(
+          key:  const Key(Keys.videoKey),
           onTap: () {
           setState(() {
             _controller.value.isPlaying ? _controller.pause()
