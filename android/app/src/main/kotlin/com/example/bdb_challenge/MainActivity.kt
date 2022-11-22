@@ -1,4 +1,4 @@
-package com.example.bdb_challenge
+package com.hershel.bdb_challenge
 
 import io.flutter.embedding.android.FlutterActivity
 
